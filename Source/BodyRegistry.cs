@@ -200,13 +200,13 @@ namespace BSVisiblePantsFramework
             }
         }
 
-        // Every body lists all apparel Visible Pants made visible, plus anything its replacements
-        // name. A replacement whose texture isn't loaded (its art mod is missing) is dropped with
-        // a warning, so "Has Replacement" never promises art that can't be drawn.
+        // Every body lists all drawn legwear, plus anything its replacements name. A replacement
+        // whose texture isn't loaded (its art mod is missing) is dropped with a warning, so
+        // "Has Replacement" never promises art that can't be drawn.
         private static void BuildItems()
         {
-            List<ThingDef> visiblePants = DefDatabase<ThingDef>.AllDefsListForReading
-                .Where(d => d.IsApparel && d.HasModExtension<VisiblePants.ThingDefExtension>())
+            List<ThingDef> legwear = DefDatabase<ThingDef>.AllDefsListForReading
+                .Where(IsDrawnLegwear)
                 .ToList();
 
             foreach (BodyEntry body in Bodies)
@@ -227,7 +227,7 @@ namespace BSVisiblePantsFramework
                     paths[apparel] = rep.wornGraphicPath;
                 }
 
-                foreach (ThingDef apparel in visiblePants.Concat(paths.Keys).Distinct())
+                foreach (ThingDef apparel in legwear.Concat(paths.Keys).Distinct())
                 {
                     ItemEntry item = new ItemEntry
                     {
@@ -241,6 +241,26 @@ namespace BSVisiblePantsFramework
                 }
                 body.items.SortBy(i => i.apparel.label ?? i.apparel.defName);
             }
+        }
+
+        // Anything Visible Pants marked, or any apparel with a worn texture that covers the legs but
+        // not the torso. Addons such as Medieval Visible Pants Addon only add a wornGraphicPath and
+        // never Visible Pants' marker, so the marker alone misses them. Torso coverage rules out
+        // dresses, robes and full armour, which aren't legwear.
+        private static bool IsDrawnLegwear(ThingDef def)
+        {
+            if (!def.IsApparel)
+            {
+                return false;
+            }
+            if (def.HasModExtension<VisiblePants.ThingDefExtension>())
+            {
+                return true;
+            }
+            List<BodyPartGroupDef> groups = def.apparel.bodyPartGroups;
+            return !def.apparel.wornGraphicPath.NullOrEmpty()
+                && groups.Contains(BodyPartGroupDefOf.Legs)
+                && !groups.Contains(BodyPartGroupDefOf.Torso);
         }
 
         private static bool AnyTextureFor(string path)
