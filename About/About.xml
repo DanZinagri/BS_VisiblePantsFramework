@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Big and Small - Visible Pants Framework</name>
+  <author>DanZinagri</author>
+  <packageId>DanZinagri.BSVisiblePantsFramework</packageId>
+  <supportedVersions>
+    <li>1.7</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+    <li>
+      <packageId>ludeon.rimworld.biotech</packageId>
+      <displayName>Biotech</displayName>
+    </li>
+    <li>
+      <packageId>XeoNovaDan.VisiblePants</packageId>
+      <displayName>[XND] Visible Pants</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2264108215</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>RedMattis.BetterPrerequisites</packageId>
+      <displayName>Big and Small - Framework</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2925432336</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>XeoNovaDan.VisiblePants</li>
+    <li>RedMattis.BetterPrerequisites</li>
+    <li>RedMattis.BigSmall.Core</li>
+  </loadAfter>
+  <description>Hides or replaces Visible Pants trousers on pawns whose legs have been replaced.</description>
+</ModMetaData>

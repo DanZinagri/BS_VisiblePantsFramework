@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Each def is one header in the settings -->
+
+  <BSVisiblePantsFramework.BodyHideDef>
+    <defName>BSVPF_SnakeBody</defName>
+    <label>snake body</label>
+    <raceSwaps>
+      <li>BS_Naga</li>
+    </raceSwaps>
+    <!-- Example: draw plain pants as the skirt from Pumpkinlass Visible Pants Retexture on snake bodies.
+    <replacements>
+      <li>
+        <apparel>Apparel_Pants</apparel>
+        <wornGraphicPath>VanillaApparelExpanded/Things/Pawn/Humanlike/Apparel/Skirt/Skirt</wornGraphicPath>
+      </li>
+    </replacements>
+    -->
+  </BSVisiblePantsFramework.BodyHideDef>
+
+  <BSVisiblePantsFramework.BodyHideDef>
+    <defName>BSVPF_CentaurBody</defName>
+    <label>centaur body</label>
+    <raceSwaps>
+      <li>BS_Centaur</li>
+    </raceSwaps>
+  </BSVisiblePantsFramework.BodyHideDef>
+
+  <BSVisiblePantsFramework.BodyHideDef>
+    <defName>BSVPF_SpiderBody</defName>
+    <label>spider body</label>
+    <raceSwaps>
+      <li>BS_SpiderPersonRace</li>
+    </raceSwaps>
+  </BSVisiblePantsFramework.BodyHideDef>
+
+</Defs>

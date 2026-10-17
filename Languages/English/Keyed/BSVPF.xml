@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <BSVPF_Enabled>Enable body-based pants swapping</BSVPF_Enabled>
+  <BSVPF_EnabledDesc>When off, every pawn draws Visible Pants exactly as it would without this mod.</BSVPF_EnabledDesc>
+  <BSVPF_Explanation>Checked items are drawn on pawns with that body, using the replacement texture where one exists. Unchecked items are hidden. Changes apply when this window closes.</BSVPF_Explanation>
+  <BSVPF_ExpandAll>Expand All</BSVPF_ExpandAll>
+  <BSVPF_CollapseAll>Collapse All</BSVPF_CollapseAll>
+  <BSVPF_EnableAll>Enable All</BSVPF_EnableAll>
+  <BSVPF_DisableAll>Disable All</BSVPF_DisableAll>
+  <BSVPF_DisableAllWithoutReplacements>Disable All Without Replacements</BSVPF_DisableAllWithoutReplacements>
+  <BSVPF_HasReplacement>- Has Replacement</BSVPF_HasReplacement>
+  <BSVPF_ShownCount>{0} / {1} shown</BSVPF_ShownCount>
+  <BSVPF_GenesTip>Genes counted as this body:</BSVPF_GenesTip>
+  <BSVPF_NoBodies>No supported bodies found. None of the loaded mods add a gene that grants a snake, centaur or spider body (Big and Small - Genes &amp; More adds all three).</BSVPF_NoBodies>
+</LanguageData>

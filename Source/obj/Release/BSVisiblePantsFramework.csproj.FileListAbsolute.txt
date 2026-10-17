@@ -1,0 +1,5 @@
+C:\Users\DanZinagri\Documents\RimWorldProjects\BS_VisiblePantsFramework\1.7\Assemblies\BSVisiblePantsFramework.dll
+C:\Users\DanZinagri\Documents\RimWorldProjects\BS_VisiblePantsFramework\Source\obj\Release\BSVisiblePantsFramework.csproj.AssemblyReference.cache
+C:\Users\DanZinagri\Documents\RimWorldProjects\BS_VisiblePantsFramework\Source\obj\Release\BSVisiblePantsFramework.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DanZinagri\Documents\RimWorldProjects\BS_VisiblePantsFramework\Source\obj\Release\BSVisiblePantsFramework.csproj.CoreCompileInputs.cache
+C:\Users\DanZinagri\Documents\RimWorldProjects\BS_VisiblePantsFramework\Source\obj\Release\BSVisiblePantsFramework.dll
