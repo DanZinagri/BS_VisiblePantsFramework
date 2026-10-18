@@ -170,7 +170,10 @@ namespace BSVisiblePantsFramework
             {
                 foreach (string race in body.def.raceSwaps)
                 {
-                    raceToBody.TryAdd(race, body);
+                    if (!raceToBody.ContainsKey(race))
+                    {
+                        raceToBody[race] = body;
+                    }
                 }
             }
             foreach (GeneDef gene in DefDatabase<GeneDef>.AllDefsListForReading)
@@ -194,8 +197,9 @@ namespace BSVisiblePantsFramework
 
         private static void Claim(GeneDef gene, BodyEntry body)
         {
-            if (geneToBody.TryAdd(gene, body))
+            if (!geneToBody.ContainsKey(gene))
             {
+                geneToBody[gene] = body;
                 body.genes.Add(gene);
             }
         }
@@ -234,7 +238,7 @@ namespace BSVisiblePantsFramework
                         body = body,
                         apparel = apparel,
                         key = body.def.defName + "|" + apparel.defName,
-                        replacementPath = paths.GetValueOrDefault(apparel),
+                        replacementPath = paths.TryGetValue(apparel, out string path) ? path : null,
                     };
                     body.items.Add(item);
                     body.byApparel[apparel] = item;
