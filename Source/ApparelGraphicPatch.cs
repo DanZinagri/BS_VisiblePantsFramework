@@ -5,15 +5,6 @@ using Verse;
 
 namespace BSVisiblePantsFramework
 {
-    [StaticConstructorOnStartup]
-    public static class HarmonyInit
-    {
-        static HarmonyInit()
-        {
-            new Harmony("DanZinagri.BSVisiblePantsFramework").PatchAll();
-        }
-    }
-
     // Decides listed apparel's worn graphic on pawns with a listed body: the original (run the
     // getter as normal), a replacement texture, or nothing at all. Hiding returns false with an
     // empty record, which is exactly what the getter does for any apparel without a worn texture,
